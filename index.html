@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Simple Interest Calculator</title>
+        <script src="script.js"></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="maindiv">
+            <h1>Simple Interest Calculator</h1>
+
+            <table class="table">
+                <tr>
+                    <td><label for="principal">Amount:</label></td> 
+                    <td><input class="input" type="number"  id="principal" value="0"></td>
+                </tr>
+                <tr>
+                    <td><label for="rate">Interest Rate:</label></td>
+                    <td><input class="input" type="range" id="rate" min="1" max="20" step="0.25" value="10.25%" oninput="updateRate()"><span style="position: absolute; font-size: 75%; align-items: center; margin-top: 5px;" id="rate_val">10.25%</span></td>
+                </tr>
+                <tr>
+                    <td><label for="years">No. of Years:</label></td>
+                    <td><select class="input" id="years"></select></td>
+                </tr>
+                <tr>
+                    <td><input style="margin-top: 5px;" class="button" type="button" onclick="compute()" value="Compute Interest"></td>
+                </tr>
+            </table>
+
+            <div class="response"><span id="result"></span></div><br>
+
+            <footer style="text-align:left; font-size:x-small;">
+                &#169; Everyone Can Get Rich<br>
+                This Calculator belongs to --Ernest Musser--
+            </footer>
+        </div>
+    </body>
+</html>
